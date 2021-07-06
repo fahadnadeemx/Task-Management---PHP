@@ -1,0 +1,39 @@
+label{
+    font-size: 20px !important;
+    color: #838383;
+}
+#formGroupExampleInput{
+    border:none !important;
+    border-radius: 0 !important;
+    border-bottom:1px solid #838383!important ;
+    color: #838383;
+    font-weight: bold !important;
+    font-size: 25px !important;
+}
+
+#formGroupExampleInput:focus {
+    box-shadow: none !important;
+ }
+
+ .form-control{
+     border: none;
+     box-shadow: none !important;
+     color: black !important;
+     font-weight: bold;
+     font-size: 15px !important;
+     
+ }
+
+ #assign,#dueDate,#url{
+     width: 100% !important;
+     border: 1px solid black;
+ }
+
+ #textArea{
+     border: 1px solid black !important;
+ }
+
+ .createTask{
+     text-align: right;
+ }
+ 

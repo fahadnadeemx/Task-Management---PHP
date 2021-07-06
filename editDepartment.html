@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href="./css/createTask.css">
     <title>Task Managment System</title>
 </head>
 
@@ -22,13 +21,12 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light row">
         <div class="col-6 col-sm-6">
-            <a class="navbar-brand" href="#">Create Task</a>
+            <a class="navbar-brand" href="#">Edit Department</a>
         </div>
         <div class="col-6 col-sm-6 text-right">
             <button class="btn my-2 my-sm-0 signOut" type="submit">Sign Out</button>
         </div>
     </nav>
-
 
     <!--sidebar button responsive -->
     <input type="checkbox" id="check">
@@ -57,55 +55,25 @@
         </ul>
     </div>
     <!--sidebar end-->
+
     <!--section start-->
     <section>
+
         <form>
-            <div class="form-group">
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Project title" required>
-                <input type="text" class="form-control" id="projectDiscription" placeholder="Add project discription"
-                    required>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-2">
-                    <label for="assign">Assign:</label>
-                </div>
-                <div class="col-md-3">
-                    <select id="assign" class="form-control">
-                        <option>Name #1</option>
-                        <option>Name #2</option>
-                        <option>Name #3</option>
-                    </select>
-                </div>
-            </div>
+            <label>Department</label>
+            <input type="text" class="form-control" id="depertmentName" required style="max-width: 300px;">
             <br>
-            <div class="form-group row">
-                <div class="col-md-2">
-                    <label for="dueDate">Due Date:</label>
-                </div>
-                <div class="col-md-2">
-                    <input type="date" class="form-control" id="dueDate" required>
-                </div>
-            </div>
-            <br>
-            <div class="form-group row">
-                <div class="col-md-2">
-                    <label for="url">Add url</label>
-                </div>
-                <div class="col-md-3">
-                    <input type="url" class="form-control" id="url" required>
-                </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <textarea class="form-control" id="textArea" placeholder="Add comments about project"
-                    rows="6"></textarea>
-            </div>
-            <div class="form-group" style="text-align: right;">
-                <input class="btn btn-primary submitBtn" type="submit" value="Submit">
-            </div>
+            <label>About Department <span style="font-size: 10px;">(Minimum 500 words)</span></label>
+            <textarea class="form-control" id="textArea"
+            rows="3" style="max-width: 400px;" placeholder="discription"></textarea>
+       
+        <br>
+        <div class="form-group" style="text-align: right; max-width: 400px;">
+            <input class="btn submitBtn" type="submit" value="save">
+            <button class="btn deleteBtn" >Delete</button>
+        </div>
+    </form>
 
-
-        </form>
     </section>
     <!--section end-->
 

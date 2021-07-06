@@ -5,6 +5,45 @@
     font-family: 'Roboto', sans-serif;
 }
 
+h3{
+    color: #00408A;
+    font-weight: bold;
+}
+
+label{
+   color: #838383;
+}
+
+.submitBtn{
+    background: #00408A;
+    border: none !important;
+    color: white;
+    width: 120px;
+}
+
+.submitBtn:hover{
+    opacity: 0.7;
+}
+.deleteBtn{
+    background: #B71A2D;
+    border: none !important;
+    color: white;
+    width: 120px;
+}
+
+.deleteBtn:hover{
+    opacity: 0.7;
+}
+
+.editBtn{
+    background: #1A6BC7;
+    border: none !important;
+}
+
+.editBtn:hover {
+    opacity: 0.8;
+}
+
 /* sidebar css */
 .sidebar{
     position: fixed;
@@ -78,7 +117,6 @@ label #btn{
     top:25px;
     font-size: 35px;
     color: white;
-    padding: 6px 12px;
 }
 
 label #cancel{
@@ -135,11 +173,32 @@ section{
   
     color: #fff !important;
     border-color:  #fff !important;
+
+}
+
+.signOutDiv{
+    text-align: right;
+    width: 100%;
+}
+
+.form-inline .form-control {
+    background: none;
+    border-radius: 30px;
 }
 
 .signOut{
     color:#00408A !important;
 }
+.card{
+    background:#1A6BC7;
+    margin: 10px auto;
+    padding:30px;
+    color: white;
+    border-radius: 10px;
+    border:none !important;
+}
+
+
 
 /* media qury start 720px */
 @media only screen and (max-width: 720px) {
@@ -157,6 +216,10 @@ section{
         padding-top: 20px;
         padding-bottom: 20px;
         justify-content: flex-end !important;
+    }
+
+    .navbar-brand{
+        margin-left: 55px;
     }
 
   }

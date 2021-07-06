@@ -14,7 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href="./css/createTask.css">
+    <link rel='stylesheet' href='./css/addUser.css'>
+
     <title>Task Managment System</title>
 </head>
 
@@ -22,7 +23,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light row">
         <div class="col-6 col-sm-6">
-            <a class="navbar-brand" href="#">Create Task</a>
+            <a class="navbar-brand" href="#">Edit User</a>
         </div>
         <div class="col-6 col-sm-6 text-right">
             <button class="btn my-2 my-sm-0 signOut" type="submit">Sign Out</button>
@@ -57,53 +58,54 @@
         </ul>
     </div>
     <!--sidebar end-->
+
     <!--section start-->
     <section>
         <form>
-            <div class="form-group">
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Project title" required>
-                <input type="text" class="form-control" id="projectDiscription" placeholder="Add project discription"
-                    required>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-2">
-                    <label for="assign">Assign:</label>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="enter your full name">
                 </div>
-                <div class="col-md-3">
-                    <select id="assign" class="form-control">
-                        <option>Name #1</option>
-                        <option>Name #2</option>
-                        <option>Name #3</option>
-                    </select>
+                <div class="form-group col-md-6">
+                    <label for="phoneNo">Phone No</label>
+                    <input type="text" class="form-control" id="phoneNo" placeholder="enter your phone number">
                 </div>
             </div>
-            <br>
-            <div class="form-group row">
-                <div class="col-md-2">
-                    <label for="dueDate">Due Date:</label>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="designation">Designation</label>
+                    <input type="text" class="form-control" id="designation" placeholder="employee designation">
                 </div>
-                <div class="col-md-2">
-                    <input type="date" class="form-control" id="dueDate" required>
-                </div>
-            </div>
-            <br>
-            <div class="form-group row">
-                <div class="col-md-2">
-                    <label for="url">Add url</label>
-                </div>
-                <div class="col-md-3">
-                    <input type="url" class="form-control" id="url" required>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
                 </div>
             </div>
-            <br>
-            <div class="form-group">
-                <textarea class="form-control" id="textArea" placeholder="Add comments about project"
-                    rows="6"></textarea>
+            <hr style="border: 1px solid #838383; max-width: 950px;">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="enter your email address">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="enter your password">
+                </div>
             </div>
-            <div class="form-group" style="text-align: right;">
-                <input class="btn btn-primary submitBtn" type="submit" value="Submit">
-            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="confirmpassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmpassword"
+                        placeholder="enter your confirm password">
+                </div>
+                <div class="form-group col-md-6">
+                    <label></label><br>
+                    <input class="btn submitBtn" type="submit" value="save">
+                    <button class="btn deleteBtn" >Delete</button>
+                </div>
 
+            </div>
 
         </form>
     </section>

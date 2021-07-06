@@ -1,0 +1,11 @@
+.form-control{
+    max-width: 400px;
+}
+
+label{
+    font-weight: bold;
+}
+
+.addUser{
+    text-align: right;
+}

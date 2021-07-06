@@ -13,31 +13,28 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href="./css/createTask.css">
     <title>Task Managment System</title>
-</head>
 
+</head>
+<style>
+    #search {
+        background: url(./images/icons/search.png) no-repeat;
+        color: white;
+        padding-left: 35px;
+    }
+</style>
 <bod>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Task View</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-ellipsis-v"></i>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn my-2 my-sm-0 signOut" type="submit">Sign Out</button>
-            </form>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light row">
+        <div class="col-6 col-sm-6">
+            <a class="navbar-brand" href="#">Task View</a>
+        </div>
+        <div class="col-6 col-sm-6 text-right">
+            <button class="btn my-2 my-sm-0 signOut" type="submit">Sign Out</button>
         </div>
     </nav>
-
 
     <!--sidebar button responsive -->
     <input type="checkbox" id="check">
@@ -49,7 +46,7 @@
 
     <!--sidebar start-->
     <div class="sidebar">
-        <header><a href="./dashboard.html">Dashboard</a></header>
+        <header><a href="./dashboard.html"><img src="./images/logo-1.png" alt="" width="60%"></a></header>
         <ul>
             <li><a href="./createTask.html"><i><img src="images/icons/11.png" width="25px"></i>Create Task</a></li>
             <li><a href="./taskView.html"><i><img src="images/icons/12.png" width="25px"></i>View Task</a></li>
@@ -69,48 +66,54 @@
 
     <!--section start-->
     <section>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Project Name</th>
-                    <th scope="col">List</th>
-                    <th scope="col">Asign To</th>
-                    <th scope="col">Due Date</th>
-                    <th scope="col">edit Department</th>
-                    <th scope="col">Delete Department</th>
-                    <th scope="col">View Department</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Logo Design</td>
-                    <td>In Progress</td>
-                    <td>Hanry</td>
-                    <td>15 July</td>
-                    <td><button class="btn btn-success">Edit Department</button></td>
-                    <td><button class="btn btn-danger">Delete Department</button></td>
-                    <td><button class="btn btn-primary">View Department Task</button></td>
-                </tr>
-                <tr>
-                    <td>Logo Design</td>
-                    <td>In Progress</td>
-                    <td>Hanry</td>
-                    <td>15 July</td>
-                    <td><button class="btn btn-success">Edit Department</button></td>
-                    <td><button class="btn btn-danger">Delete Department</button></td>
-                    <td><button class="btn btn-primary">View Department Task</button></td>
-                </tr>
-                <tr>
-                    <td>Logo Design</td>
-                    <td>In Progress</td>
-                    <td>Hanry</td>
-                    <td>15 July</td>
-                    <td><button class="btn btn-success">Edit Department</button></td>
-                    <td><button class="btn btn-danger">Delete Department</button></td>
-                    <td><button class="btn btn-primary">View Department Task</button></td>
-                </tr>
-            </tbody>
-        </table>
+        
+        <div class="createTask">
+            <a href="./createTask.html"><button class="btn btn-primary submitBtn">Create Task</button></a>
+            <br>
+            <br>
+            <a href="#">see all tasks</a>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Project Name</th>
+                        <th scope="col">List</th>
+                        <th scope="col">Assign To</th>
+                        <th scope="col">Due Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Logo Design</td>
+                        <td>In Progress</td>
+                        <td>Hanry</td>
+                        <td>15 July</td>
+                        <td>On Time</td>
+                        <td><a href="./viewTaskForm.html"><button class="btn btn-primary editBtn">View Task</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Logo Design</td>
+                        <td>In Progress</td>
+                        <td>Hanry</td>
+                        <td>15 July</td>
+                        <td>On Time</td>
+                        <td><a href="./viewTaskForm.html"><button class="btn btn-primary editBtn">View Task</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Logo Design</td>
+                        <td>In Progress</td>
+                        <td>Hanry</td>
+                        <td>15 July</td>
+                        <td>Last</td>
+                        <td><a href="./viewTaskForm.html"><button class="btn btn-primary editBtn">View Task</button></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
     <!--section end-->
 

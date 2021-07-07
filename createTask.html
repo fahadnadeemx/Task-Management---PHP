@@ -59,22 +59,27 @@
     <!--sidebar end-->
     <!--section start-->
     <section>
-        <form>
+        <form class="needs-validation" novalidate>
             <div class="form-group">
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Project title" required>
-                <input type="text" class="form-control" id="projectDiscription" placeholder="Add project discription"
-                    required>
+                <div class="invalid-feedback">
+                    required project name!
+                </div>
+                <input type="text" class="form-control" id="projectDiscription" placeholder="Add project discription">
+                   
             </div>
             <div class="form-group row">
                 <div class="col-md-2">
                     <label for="assign">Assign:</label>
                 </div>
                 <div class="col-md-3">
-                    <select id="assign" class="form-control">
-                        <option>Name #1</option>
-                        <option>Name #2</option>
-                        <option>Name #3</option>
+                    <select id="assign" class="custom-select"  required>
+                        <option id="">select assign to</option>
+                        <option id="1">Name #1</option>
+                        <option id="2">Name #2</option>
+                        <option id="3">Name #3</option>
                     </select>
+                   
                 </div>
             </div>
             <br>
@@ -120,6 +125,26 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict';
+                window.addEventListener('load', function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
     </body>
 
 </html>

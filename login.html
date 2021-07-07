@@ -30,58 +30,37 @@
                 <div class="col-md align-self-center loginPadding">
                     <center> <img src="./images/logo.png" width="50%"></center>
                     <br>
-                    <form onsubmit="return validate(this);">
+                    <form name="myForm" action='./cofirm.html' class="needs-validation" novalidate>
                         <label>Email Address</label>
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="Username" aria-label="Username"
-                                aria-describedby="basic-addon1" required>
-                        </div>
+                            <input type="email" class="form-control" placeholder="email" id="email" aria-label="email"
+                                aria-describedby="basic-addon1" name='email' required>
 
+                        </div>
+                        <p id="emailValidation"></p>
                         <label>Password</label>
                         <div class="input-group mb-3">
                             <input type="password" class="form-control" placeholder="password" aria-label="password"
-                                aria-describedby="basic-addon1" required>
+                                aria-describedby="basic-addon1" name='password' required>
                         </div>
 
                         <div class="input-group mb-3">
                             <a href="#">Forgot your password?</a>
                         </div>
                         <div class="input-group mb-3">
-                            <button type="submit" class="btn btn-primary" style="width:100%">Login</button>
+                            <input type="submit" class="btn btn-primary" style="width:100%" value="login">
                         </div>
-
+                        <p id="password"></p>
                         <div class="text-center">
                             <p>Don't have an account? <a href="#">Sign up</a></p>
                         </div>
+
                     </form>
                 </div>
             </div>
             <!--row start-->
         </div>
         <!--container end-->
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
     <!-- main end-->
 
@@ -96,28 +75,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <!-- <script>
-            function confirm(e){
-                e.preventDefault()
-                $('#exampleModalCenter').modal('show');
-            }
-        </script> -->
-
-<script>
-    function validate(form) {
-    
-        // validation code here ...
-    
-    
-        if(!valid) {
-            alert('Please correct the errors in the form!');
-            return false;
-        }
-        else {
-            return confirm('Do you really want to submit the form?');
-        }
-    }
-    </script>
+        
 </body>
 
 </html>

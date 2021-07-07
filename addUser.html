@@ -15,7 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='./css/addUser.css'>
-
     <title>Task Managment System</title>
 </head>
 
@@ -61,43 +60,68 @@
 
     <!--section start-->
     <section>
-        <form>
+        <form class="needs-validation" novalidate>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" class="form-control" id="fullName" placeholder="enter your full name">
+                    <label for="fullName">Full Name*</label>
+                    <input type="text" class="form-control " id="fullName" placeholder="First name" required>
+                    <div class="invalid-feedback">
+                        required full name!
+                    </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="phoneNo">Phone No</label>
-                    <input type="text" class="form-control" id="phoneNo" placeholder="enter your phone number">
+                    <label for="phoneNo">Phone No*</label>
+                    <input type="text" class="form-control" id="phoneNo" placeholder="enter your phone number" required>
+                    <div class="invalid-feedback">
+                        required Phone No!
+                    </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="designation">Designation</label>
-                    <input type="text" class="form-control" id="designation" placeholder="employee designation">
+                    <label for="department">Department*</label>
+                    <input type="text" class="form-control" id="department" placeholder="enter your department"
+                        required>
+                    <div class="invalid-feedback">
+                        required Department Name!
+                    </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    <label for="designation">Designation*</label>
+                    <input type="text" class="form-control" id="designation" placeholder="employee designation"
+                        required>
+                    <div class="invalid-feedback">
+                     required designation!
+                    </div>
                 </div>
             </div>
             <hr style="border: 1px solid #838383; max-width: 950px;">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="enter your email address">
+                    <input type="email" class="form-control" id="email" placeholder="enter your email address" required>
+                    <div class="invalid-feedback">
+                        required correct email!
+                    </div>
+
                 </div>
                 <div class="form-group col-md-6">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="enter your password">
+                    <input type="password" class="form-control" id="password" placeholder="enter your password"
+                        maxlength="16" required>
+                    <div class="invalid-feedback">
+                        required password between 16 characters!
+                    </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="confirmpassword">Confirm Password</label>
                     <input type="password" class="form-control" id="confirmpassword"
-                        placeholder="enter your confirm password">
+                        placeholder="enter your confirm password" maxlength="16" required>
+                    <div class="invalid-feedback">
+                        required password between 16 characters!
+                    </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label></label><br>
@@ -121,6 +145,28 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
     </body>
 
 </html>

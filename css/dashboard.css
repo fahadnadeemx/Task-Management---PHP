@@ -38,6 +38,7 @@ label{
 .editBtn{
     background: #1A6BC7;
     border: none !important;
+    width: 120px;
 }
 
 .editBtn:hover {

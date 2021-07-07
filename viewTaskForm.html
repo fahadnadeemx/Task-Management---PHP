@@ -14,18 +14,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <title>Task Managment System</title>
+    <title>Task Management System</title>
 </head>
 
 <bod>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light row"> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light row">
         <div class="col-6 col-sm-6">
             <a class="navbar-brand" href="#">View Task</a>
-          </div>
-          <div class="col-6 col-sm-6 text-right">
+        </div>
+        <div class="col-6 col-sm-6 text-right">
             <button class="btn my-2 my-sm-0 signOut" type="submit">Sign Out</button>
-          </div>
+        </div>
     </nav>
 
     <!--sidebar button responsive -->
@@ -61,25 +61,30 @@
         <h3>Logo Design</h3>
         <label>Project description</label>
         <p>Create realestate logo color. logo look minimal</p>
-        <label>Add Link</label><br>
+        <label>Requirement Url:</label><br>
         <a href="https://www.google.com/">https://www.google.com/</a><br>
         <label>Due Date</label><br>
         <p>2-7-2021</p>
+        <label>Priority:</label><br>
+        <p>High</p>
         <hr style="border: 1px solid #838383;">
         <h3>Submit Task</h3>
         <br>
         <form>
-            <label>Add project link</label>
-            <input type="url" class="form-control" id="url" required style="max-width: 300px;">
+            <label>Date:</label>
+            <input type="date" class="form-control" id="date" value="getDate()" required style="max-width: 400px;">
+            <br>
+            <label>Add project Url:</label>
+            <input type="url" class="form-control" id="url" required style="max-width: 400px;">
             <br>
             <label>Project comments</label>
-            <textarea class="form-control" id="textArea"
-            rows="3" style="max-width: 400px;"></textarea>
+            <textarea class="form-control" id="textArea" rows="3" style="max-width: 400px;"></textarea>
+
+            <br>
+            <div class="form-group">
+                <input class="btn btn-primary submitBtn" type="submit" value="Submit">
+            </div>
         </form>
-        <br>
-        <div class="form-group" style="text-align: right; max-width: 400px;">
-            <input class="btn btn-primary submitBtn" type="submit" value="Submit">
-        </div>
     </section>
     <!--section end-->
 

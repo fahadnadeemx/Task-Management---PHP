@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <title>Task Managment System</title>
+    <title>Task Management System</title>
 </head>
 
 <bod>
@@ -60,20 +60,19 @@
     <section>
 
         <form class="needs-validation" novalidate>
-            <label>Department</label>
-            <input type="text" class="form-control" id="depertmentName" required style="max-width: 300px;">
+            <label>Department Name<span style="color: red;">*</span></label>
+            <input type="text" class="form-control" id="depertmentName" required>
             <div class="invalid-feedback">
                 required department name!
             </div>
             <br>
-            <label>About Department <span style="font-size: 10px;">(Minimum 500 words)</span></label>
+            <label>About Department <span style="font-size: 10px; color: red;">(Minimum 500 words)</span></label>
             <textarea class="form-control" id="textArea"
-            rows="3" style="max-width: 400px;" placeholder="discription"></textarea>
+            rows="6" placeholder="description"></textarea>
        
         <br>
-        <div class="form-group" style="text-align: right; max-width: 400px;">
-            <input class="btn submitBtn" type="submit" value="save">
-            <button class="btn deleteBtn" >Delete</button>
+        <div class="form-group">
+            <input class="btn submitBtn" type="submit" value="Update">
         </div>
     </form>
 

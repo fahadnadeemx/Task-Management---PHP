@@ -9,19 +9,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel='stylesheet' href='./css/dashboard.css'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel='stylesheet' href="./css/createTask.css">
     <title>Task Management System</title>
-</head>
 
+</head>
+<style>
+    #search {
+        background: url(./images/icons/search.png) no-repeat;
+        color: white;
+        padding-left: 35px;
+    }
+</style>
 <bod>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light row">
         <div class="col-6 col-sm-6">
-            <a class="navbar-brand" href="#">View Department</a>
+            <a class="navbar-brand" href="#">Revision Task</a>
         </div>
         <div class="col-6 col-sm-6 text-right">
             <button class="btn my-2 my-sm-0 signOut" type="submit">Sign Out</button>
@@ -40,18 +48,10 @@
     <div class="sidebar">
         <header><a href="./dashboard.html"><img src="./images/logo-1.png" alt="" width="60%"></a></header>
         <ul>
-            <li><a href="./createTask.html"><i><img src="images/icons/11.png" width="25px"></i>Create Task</a></li>
-            <li><a href="./taskView.html"><i><img src="images/icons/12.png" width="25px"></i>View Task</a></li>
-            <hr>
-            <h5>Department</h5>
-            <li><a href="./addDepartment.html"><i><img src="images/icons/13.png" width="25px"></i>Add Department</a>
-            </li>
-            <li><a href="./viewDepartment.html"><i><img src="images/icons/14.png" width="25px"></i>View Department</a>
-            </li>
-            <hr>
-            <h5>User</h5>
-            <li><a href="./addUser.html"><i><img src="images/icons/15.png" width="25px"></i>Add User</a></li>
-            <li><a href="./viewUser.html"><i><img src="images/icons/16.png" width="25px"></i>View User</a></li>
+            <li><a href="./userNewTask.html"><i><img src="images/icons/11.png" width="25px"></i>New Task</a></li>
+            <li><a href="./userPendingTask.html"><i><img src="images/icons/12.png" width="25px"></i>Pending Task</a></li>
+            <li><a href="./userRevisionTask.html"><i><img src="images/icons/13.png" width="25px"></i>Revision Task</a> </li>
+            <li><a href="./userCompletedTask.html"><i><img src="images/icons/13.png" width="25px"></i>Completed Task</a> </li>
         </ul>
     </div>
     <!--sidebar end-->
@@ -59,49 +59,54 @@
     <!--section start-->
     <section>
 
-        <div style="text-align: right;">
-            <a href="./addDepartment.html"><button class="btn btn-primary submitBtn" style="width:150px">Add
-                    Department</button></a>
-            <br>
-            <br>
-        </div>
-
+    
         <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Department Name</th>
-                        <th>Description</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Delete</th>
+                        <th scope="col">Project Name</th>
+                        <th scope="col">List</th>
+                        <th scope="col">Assign To</th>
+                        <th scope="col">Due Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Priority</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>It</td>
-                        <td> Contrary to popular belief, Lorem Ipsum is not simply random text</td>
-                        <td><a href="./editDepartment.html"><button class="btn btn-primary editBtn">Edit</button></a>
+                        <td>Logo Design</td>
+                        <td>In Progress</td>
+                        <td>Hanry</td>
+                        <td>15 July</td>
+                        <td>New Task</td>
+                        <td>High</td>
+                        <td><a href="#"><button class="btn btn-primary editBtn">Revision Task</button></a>
                         </td>
-                        <td> <button class="btn deleteBtn">Delete</button></td>
                     </tr>
                     <tr>
-                        <td>Account</td>
-                        <td> Contrary to popular belief, Lorem Ipsum is not simply random text</td>
-                        <td><a href="./editDepartment.html"><button class="btn btn-primary editBtn">Edit</button></a>
+                        <td>Logo Design</td>
+                        <td>In Progress</td>
+                        <td>Hanry</td>
+                        <td>15 July</td>
+                        <td>New Task</td>
+                        <td>High</td>
+                        <td><a href="#"><button class="btn btn-primary editBtn">Revision Task</button></a>
                         </td>
-                        <td> <button class="btn deleteBtn">Delete</button></td>
                     </tr>
                     <tr>
-                        <td>Hr Manager</td>
-                        <td> Contrary to popular belief, Lorem Ipsum is not simply random text</td>
-                        <td><a href="./editDepartment.html"><button class="btn btn-primary editBtn">Edit</button></a>
+                        <td>Logo Design</td>
+                        <td>In Progress</td>
+                        <td>Hanry</td>
+                        <td>15 July</td>
+                        <td>New Task</td>
+                        <td>High</td>
+                        <td><a href="#"><button class="btn btn-primary editBtn">Revision Task</button></a>
                         </td>
-                        <td> <button class="btn deleteBtn">Delete</button></td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-
+        </div> 
     </section>
     <!--section end-->
 

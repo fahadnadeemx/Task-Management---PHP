@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='./css/addUser.css'>
 
-    <title>Task Managment System</title>
+    <title>Task Management System</title>
 </head>
 
 <bod>
@@ -64,14 +64,14 @@
         <form class="needs-validation" novalidate>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="fullName">Full Name*</label>
+                    <label for="fullName">Full Name<span style="color: red;">*</span></label>
                     <input type="text" class="form-control" id="fullName" placeholder="enter your full name" required>
                     <div class="invalid-feedback">
                         required full name!
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="phoneNo">Phone No*</label>
+                    <label for="phoneNo">Phone No<span style="color: red;">*</span></label>
                     <input type="text" class="form-control" id="phoneNo" placeholder="enter your phone number" required>
                     <div class="invalid-feedback">
                         required Phone No!
@@ -80,7 +80,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="department">Department*</label>
+                    <label for="department">Department<span style="color: red;">*</span></label>
                     <input type="text" class="form-control" id="department" placeholder="enter your department name"
                         required>
                     <div class="invalid-feedback">
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="designation">Designation*</label>
+                    <label for="designation">Designation<span style="color: red;">*</span></label>
                     <input type="text" class="form-control" id="designation" placeholder="employee designation"
                         required>
                     <div class="invalid-feedback">
@@ -99,14 +99,14 @@
             <hr style="border: 1px solid #838383; max-width: 950px;">
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="email">Email*</label>
+                    <label for="email">Email<span style="color: red;">*</span></label>
                     <input type="email" class="form-control" id="email" placeholder="enter your email address" required>
                     <div class="invalid-feedback">
                         required correct email!
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="password">Password*</label>
+                    <label for="password">Password<span style="color: red;">*</span></label>
                     <input type="password" class="form-control" id="password" placeholder="enter your password"
                         maxlength="16" required>
                     <div class="invalid-feedback">
@@ -116,7 +116,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="confirmpassword">Confirm Password*</label>
+                    <label for="confirmpassword">Confirm Password<span style="color: red;">*</span></label>
                     <input type="password" class="form-control" id="confirmpassword"
                         placeholder="enter your confirm password" maxlength="16" required>
                     <div class="invalid-feedback">
@@ -125,8 +125,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label></label><br>
-                    <input class="btn submitBtn" type="submit" value="save">
-                    <button class="btn deleteBtn">Delete</button>
+                    <input class="btn submitBtn" type="submit" value="Update">
                 </div>
 
             </div>

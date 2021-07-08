@@ -8,13 +8,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel='stylesheet' href='./css/dashboard.css'>
+    <link rel='stylesheet' href='../assets/css/dashboard.css'>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='./css/addUser.css'>
+    <link rel='stylesheet' href='../assets/css/addUser.css'>
+
     <title>Task Management System</title>
 </head>
 
@@ -22,7 +23,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light row">
         <div class="col-6 col-sm-6">
-            <a class="navbar-brand" href="#">Add User</a>
+            <a class="navbar-brand" href="#">Edit User</a>
         </div>
         <div class="col-6 col-sm-6 text-right">
             <button class="btn my-2 my-sm-0 signOut" type="submit">Sign Out</button>
@@ -38,25 +39,26 @@
     </label>
     <!--sidebar button responsive -->
 
-    <!--sidebar start-->
-    <div class="sidebar">
-        <header><a href="./dashboard.html"><img src="./images/logo-1.png" alt="" width="60%"></a></header>
+      <!--sidebar start-->
+      <div class="sidebar">
+        <header><a href="../admin/dashboard.html"><img src="../assets/images/logo-1.png" alt="" width="60%"></a></header>
         <ul>
-            <li><a href="./createTask.html"><i><img src="images/icons/11.png" width="25px"></i>Create Task</a></li>
-            <li><a href="./taskView.html"><i><img src="images/icons/12.png" width="25px"></i>View Task</a></li>
+            <li><a href="../admin/createTask.html"><i><img src="../assets/images/icons/11.png" width="25px"></i>Create Task</a></li>
+            <li><a href="../admin/taskView.html"><i><img src="../assets/images/icons/12.png" width="25px"></i>View Task</a></li>
             <hr>
             <h5>Department</h5>
-            <li><a href="./addDepartment.html"><i><img src="images/icons/13.png" width="25px"></i>Add Department</a>
+            <li><a href="../admin/addDepartment.html"><i><img src="../assets/images/icons/13.png" width="25px"></i>Add Department</a>
             </li>
-            <li><a href="./viewDepartment.html"><i><img src="images/icons/14.png" width="25px"></i>View Department</a>
+            <li><a href="../admin/viewDepartment.html"><i><img src="../assets/images/icons/14.png" width="25px"></i>View Department</a>
             </li>
             <hr>
             <h5>User</h5>
-            <li><a href="./addUser.html"><i><img src="images/icons/15.png" width="25px"></i>Add User</a></li>
-            <li><a href="./viewUser.html"><i><img src="images/icons/16.png" width="25px"></i>View User</a></li>
+            <li><a href="../admin/addUser.html"><i><img src="../assets/images/icons/15.png" width="25px"></i>Add User</a></li>
+            <li><a href="../admin/viewUser.html"><i><img src="../assets/images/icons/16.png" width="25px"></i>View User</a></li>
         </ul>
     </div>
     <!--sidebar end-->
+
 
     <!--section start-->
     <section>
@@ -64,7 +66,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="fullName">Full Name<span style="color: red;">*</span></label>
-                    <input type="text" class="form-control " id="fullName" placeholder="First name" required>
+                    <input type="text" class="form-control" id="fullName" placeholder="enter your full name" required>
                     <div class="invalid-feedback">
                         required full name!
                     </div>
@@ -80,7 +82,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="department">Department<span style="color: red;">*</span></label>
-                    <input type="text" class="form-control" id="department" placeholder="enter your department"
+                    <input type="text" class="form-control" id="department" placeholder="enter your department name"
                         required>
                     <div class="invalid-feedback">
                         required Department Name!
@@ -103,7 +105,6 @@
                     <div class="invalid-feedback">
                         required correct email!
                     </div>
-
                 </div>
                 <div class="form-group col-md-6">
                     <label for="password">Password<span style="color: red;">*</span></label>
@@ -125,7 +126,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label></label><br>
-                    <button type="submit" class="btn btn-primary submitBtn" style="margin-top: 7px;">Submit</button>
+                    <input class="btn submitBtn" type="submit" value="Update">
                 </div>
 
             </div>
@@ -145,7 +146,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {
@@ -166,7 +166,6 @@
             }, false);
         })();
     </script>
-
     </body>
 
 </html>

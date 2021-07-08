@@ -1,69 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel='stylesheet' href='./css/login.css'>
+    <link rel='stylesheet' href='../assets/css/dashboard.css'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-    <title>Task Management System</title>
 </head>
+<style>
+    * {
+        font-family: 'Red Hat Display', sans-serif;
+    }
 
+    h1 {
+        color: #1B6AC7;
+        font-weight: 600;
+    }
+
+    p {
+        font-size:16px;
+    }
+
+    .main {
+        background:#1B6AC7;
+        width: 100%;
+        padding: 10px;
+        height: 350px;
+        margin:0 auto;
+    }
+
+    .shedow {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+
+   
+    .btn {
+        border:2px solid #1B6AC7;
+        background:none;
+        margin:10px;
+        width:150px
+    }
+    .admin {
+        background: #1B6AC7;
+        color:white;
+    }
+
+   @media screen and (min-width: 720px) { 
+         .reverse {
+            flex-flow: wrap-reverse !important;
+         }
+
+    }
+
+</style>
+       
 <body>
-
-    <!-- main start-->
-    <div class="main">
-        <!--container start-->
-        <div class="container">
-            <!--row start-->
-            <div class="row">
-                <div class="col-md loginBG">
-                    <img src="images/img-login.png" width="80%">
-                </div>
-                <div class="col-md align-self-center loginPadding">
-                    <center> <img src="./images/logo.png" width="50%"></center>
-                    <br>
-                    <form name="myForm" action='./cofirm.html' class="needs-validation" novalidate>
-                        <label>Email Address</label>
-                        <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="email" id="email" aria-label="email"
-                                aria-describedby="basic-addon1" name='email' required>
-
+        <div class="main">
+            <center>
+                <img src="./assets/images/logo-1.png" alt="" width="200px"></center>
+            <br />
+            <br />
+            <div class="container">
+                <div class="row shedow">
+                    <div class="col">
+                        <div class="row reverse">
+                            <div class="col-md-12 col-lg-6 align-self-center">
+                                <h1>Task Management System</h1>
+                                <br />
+                                <p>
+                                    There are many variations of passages of Lorem Ipsum available, 
+                                    but the majority have suffered alteration in some form, by injected
+                                    humour, or randomised words which don't look even slightly believable.
+                                    If you are going to use a passage of Lorem Ipsum,
+                                </p>
+                                <br />
+                                 <a href="./admin/login.html"><Button class="btn admin"> Admin Login </Button></a>
+                               <a href="./user/login.html"><Button class="btn"> User Login </Button></a>  
+                               
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                                <img class="landing-img" src=".//assets/images/landing-image.png" alt="" width="100%">
+                            </div>
                         </div>
-                        <p id="emailValidation"></p>
-                        <label>Password</label>
-                        <div class="input-group mb-3">
-                            <input type="password" class="form-control" placeholder="password" aria-label="password"
-                                aria-describedby="basic-addon1" name='password' required>
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <a href="#">Forgot your password?</a>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="submit" class="btn btn-primary" style="width:100%" value="login">
-                        </div>
-                        <p id="password"></p>
-                        <div class="text-center">
-                            <p>Don't have an account? <a href="#">Sign up</a></p>
-                        </div>
-
-                    </form>
+                    </div>
                 </div>
             </div>
-            <!--row start-->
         </div>
-        <!--container end-->
-    </div>
-    <!-- main end-->
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -75,7 +108,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        
 </body>
 
 </html>

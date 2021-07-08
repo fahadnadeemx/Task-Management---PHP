@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel='stylesheet' href='./css/dashboard.css'>
+    <link rel='stylesheet' href='../assets/css/dashboard.css'>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,68 +39,65 @@
 
     <!--sidebar start-->
     <div class="sidebar">
-        <header><a href="./dashboard.html"><img src="./images/logo-1.png" alt="" width="60%"></a></header>
+        <header><a href="../user/dashboard.html"><img src="../assets/images/logo-1.png" alt="" width="60%"></a></header>
         <ul>
-            <li><a href="./createTask.html"><i><img src="images/icons/11.png" width="25px"></i>Create Task</a></li>
-            <li><a href="./taskView.html"><i><img src="images/icons/12.png" width="25px"></i>View Task</a></li>
-            <hr>
-            <h5>Department</h5>
-            <li><a href="./addDepartment.html"><i><img src="images/icons/13.png" width="25px"></i>Add Department</a>
-            </li>
-            <li><a href="./viewDepartment.html"><i><img src="images/icons/14.png" width="25px"></i>View Department</a>
-            </li>
-            <hr>
-            <h5>User</h5>
-            <li><a href="./addUser.html"><i><img src="images/icons/15.png" width="25px"></i>Add User</a></li>
-            <li><a href="./viewUser.html"><i><img src="images/icons/16.png" width="25px"></i>View User</a></li>
+            <li><a href="../user/userNewTask.html"><i><img src="../assets/images/icons/11.png" width="25px"></i>New
+                    Task</a></li>
+            <li><a href="../user/userPendingTask.html"><i><img src="../assets/images/icons/12.png"
+                            width="25px"></i>Pending Task</a></li>
+            <li><a href="../user/userRevisionTask.html"><i><img src="../assets/images/icons/13.png"
+                            width="25px"></i>Revision Task</a> </li>
+            <li><a href="../user/userCompletedTask.html"><i><img src="../assets/images/icons/13.png"
+                            width="25px"></i>Completed Task</a> </li>
         </ul>
     </div>
     <!--sidebar end-->
 
+
     <!--section start-->
     <section>
         <div class="container">
-            <center><img src="images/logo.png" alt="" width="300px"></center>
+            <center><img src="../assets/images/logo.png" alt="" width="300px"></center>
             <br>
             <br>
             <div class="row">
                 <div class="col-md">
-                    <div class="card"> 
+                    <div class="card">
                         <div class="row">
                             <div class="col-sm-8">
                                 <h3 class="card-title" style="color: white;">1</h3>
-                                <h5>Assign Tasks</h5>
+                                <h5>Pending Tasks</h5>
                             </div>
                             <div class="col-sm-4" style="text-align: right;">
-                               <h1 style="font-size: 65px;"> <i class="fas fa-tasks"></i></h1>
+                                <h1 style="font-size: 65px;"> <i class="fas fa-tasks"></i></h1>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md">
-                    <div class="card"> 
+                    <div class="card">
                         <div class="row">
-                            <div class="col-sm">
+                            <div class="col-sm-8">
                                 <h3 class="card-title" style="color: white;">2</h3>
-                                <h5>Departments</h5>
+                                <h5>Revision Tasks</h5>
                             </div>
-                            <div class="col-sm" style="text-align: right;">
-                               <h1 style="font-size: 65px;"> <i class="fal fa-building"></i></h1>
+                            <div class="col-sm-4" style="text-align: right;">
+                                <h1 style="font-size: 65px;"> <i class="fal fa-building"></i></h1>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md">
-                    <div class="card"> 
+                    <div class="card">
                         <div class="row">
-                            <div class="col-sm">
+                            <div class="col-sm-8">
                                 <h3 class="card-title" style="color: white;">3</h3>
-                                <h5>Users</h5>
+                                <h5>Completed Tasks</h5>
                             </div>
-                            <div class="col-sm" style="text-align: right;">
-                               <h1 style="font-size: 65px;"> <i class="fas fa-users"></i></h1>
+                            <div class="col-sm-4" style="text-align: right;">
+                                <h1 style="font-size: 65px;"> <i class="fas fa-users"></i></h1>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>

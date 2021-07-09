@@ -6,6 +6,7 @@ class DB
   private $password = "";
   private $database = "fahad";
   public $db;
+  public $query;
 
   /**
    * Connect with database
@@ -18,5 +19,15 @@ class DB
       die("Connection failed: " . $this->db->connect_error);
       exit();
     }
+  }
+
+  public function query($query)
+  {
+    return mysqli_query($this->db, $query);
+  }
+
+  public function count($result)
+  {
+    return mysqli_num_rows($result);
   }
 }

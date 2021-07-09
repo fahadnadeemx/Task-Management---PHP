@@ -1,7 +1,3 @@
-<?php
-include_once('app/db.php');
-$db = new DB();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,8 +84,8 @@ $db = new DB();
                                 If you are going to use a passage of Lorem Ipsum,
                             </p>
                             <br />
-                            <a href="./admin/login.html"><Button class="btn admin"> Admin Login </Button></a>
-                            <a href="./user/login.html"><Button class="btn"> User Login </Button></a>
+                            <a href="./auth/"><Button class="btn admin"> Admin Login </Button></a>
+                            <a href="./auth/"><Button class="btn"> User Login </Button></a>
 
                         </div>
                         <div class="col-md-12 col-lg-6">

@@ -46,10 +46,10 @@ class Auth
         if (($user['role'] ?? 'guest') != $role) {
             switch (($user['role'] ?? 'guest')) {
                 case 'guest':
-                    header('Location: ./../auth/');
+                    header('Location: http://' . $_SERVER['HTTP_HOST'] . '/mushiPHP/fahad/auth/');
                     break;
                 default:
-                    header('Location: ./../dashboard/');
+                    header('Location: http://' . $_SERVER['HTTP_HOST'] . '/mushiPHP/fahad/dashboard/');
                     break;
             }
         }

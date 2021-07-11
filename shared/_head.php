@@ -1,5 +1,5 @@
 <?php
-define('MYHTTP', 'http://'.$_SERVER['HTTP_HOST'] . '/mushiPHP/fahad/');
+define('MYHTTP', 'http://'.$_SERVER['HTTP_HOST'] . '/taskman');
 include_once(ROOT.'app/Global.php');
 $user = user();
 ByPass($user['role'] ?? 'user');
@@ -28,7 +28,7 @@ ByPass($user['role'] ?? 'user');
             <a class="navbar-brand" href="#"><?= $pageName ?? "Dashboard" ?></a>
         </div>
         <div class="col-6 col-sm-6 text-right">
-            <button class="btn my-2 my-sm-0 signOut" onclick="location.href = './<?=MYHTTP?>/auth/logout/'" type="submit">Sign Out</button>
+            <button class="btn my-2 my-sm-0 signOut" onclick="location.href = '<?=MYHTTP?>/auth/logout/'" type="submit">Sign Out</button>
         </div>
     </nav>
 

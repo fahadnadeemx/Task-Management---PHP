@@ -4,7 +4,7 @@ class DB
   private $servername = "localhost";
   private $username = "root";
   private $password = "";
-  private $database = "fahad";
+  private $database = "taskman";
   public $db;
   public $query;
 

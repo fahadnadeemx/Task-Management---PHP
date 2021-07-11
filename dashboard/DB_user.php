@@ -1,3 +1,17 @@
+<?php
+include_once(ROOT . 'app/DB.php');
+$db = new DB();
+$data  = [
+    'counts' => $db->toArray($db->query('SELECT COUNT(*) as "count",`status` FROM `tasks` WHERE `isActive`=1 AND `user_id`=' . $user['user_id'] . ' GROUP BY `status`')),
+    'icons' => [
+        'check',
+        'building',
+        'users',
+        'tasks'
+    ],
+];
+
+?>
 <!--section start-->
 <section>
     <div class="container">
@@ -5,45 +19,21 @@
         <br>
         <br>
         <div class="row">
-            <div class="col-md">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h3 class="card-title" style="color: white;">1</h3>
-                            <h5>Pending Tasks</h5>
-                        </div>
-                        <div class="col-sm-4" style="text-align: right;">
-                            <h1 style="font-size: 65px;"> <i class="fas fa-tasks"></i></h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h3 class="card-title" style="color: white;">2</h3>
-                            <h5>Revision Tasks</h5>
-                        </div>
-                        <div class="col-sm-4" style="text-align: right;">
-                            <h1 style="font-size: 65px;"> <i class="fal fa-building"></i></h1>
+            <?php foreach (($data['counts'] ?? []) as $key => $dd) { ?>
+                <div class="col-md">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h3 class="card-title" style="color: white;"><?= ($dd['count'] ?? '0') ?></h3>
+                                <h5><?= ucfirst($dd['status'] ?? '') ?> Tasks</h5>
+                            </div>
+                            <div class="col-sm-4" style="text-align: right;">
+                                <h1 style="font-size: 65px;"> <i class="fas fa-<?= $data['icons'][$key] ?? 'tasks' ?>"></i></h1>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <h3 class="card-title" style="color: white;">3</h3>
-                            <h5>Completed Tasks</h5>
-                        </div>
-                        <div class="col-sm-4" style="text-align: right;">
-                            <h1 style="font-size: 65px;"> <i class="fas fa-users"></i></h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </section>

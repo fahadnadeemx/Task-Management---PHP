@@ -1,14 +1,17 @@
 <?php
 define('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/mushiPHP/fahad/');
-include_once(ROOT.'shared/_head.php');
-include_once(ROOT.'app/Global.php'); #/app/Global.php');
+include_once(ROOT . 'shared/_head.php');
+include_once(ROOT . 'app/Global.php'); #/app/Global.php');
+include_once(ROOT . 'app/DB.php');
 $user = user();
 ByPass('admin');
+$db = new DB();
+$users = $db->query('SELECT * FROM `users` WHERE `IsActive` = 1');
 ?>
 <!--section start-->
 <section>
     <div class="addUser">
-        <a href="<?= MYHTTP ?? '../' ?>dashboard/user/add/""><button class="btn btn-primary submitBtn">Add User</button></a>
+        <a href="<?= MYHTTP ?? '../' ?>dashboard/user/add/""><button class=" btn btn-primary submitBtn">Add User</button></a>
         <br>
         <br>
     </div>
@@ -25,37 +28,23 @@ ByPass('admin');
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Name #1</td>
-                    <td>It</td>
-                    <td>Web Developer</td>
-                    <td>name@gmail.com</td>
-                    <td><a href="../admin/editUser.html"><button class="btn btn-primary editBtn">Edit</button></a></td>
-                    <td> <button class="btn deleteBtn">Delete</button></td>
-                </tr>
-                <tr>
-                    <td>Name #1</td>
-                    <td>It</td>
-                    <td>Web Developer</td>
-                    <td>name@gmail.com</td>
-                    <td><a href="../admin/editUser.html"><button class="btn btn-primary editBtn">Edit</button></a></td>
-                    <td> <button class="btn deleteBtn">Delete</button></td>
-                </tr>
-                <tr>
-                    <td>Name #1</td>
-                    <td>It</td>
-                    <td>Web Developer</td>
-                    <td>name@gmail.com</td>
-                    <td><a href="../admin/editUser.html"><button class="btn btn-primary editBtn">Edit</button></a></td>
-                    <td> <button class="btn deleteBtn">Delete</button></td>
-                </tr>
+                <?php while ($row = mysqli_fetch_assoc($users)) { ?>
+                    <tr>
+                        <td><?= $row['full_name'] ?></td>
+                        <td><?= $row['department'] ?></td>
+                        <td><?= $row['designation'] ?></td>
+                        <td><?= $row['email'] ?></td>
+                        <td><a href="#"><button class="btn btn-primary editBtn">Edit</button></a></td>
+                        <td> <button class="btn deleteBtn">Delete</button></td>
+                    </tr>
+                <?php } ?>
             </tbody>
         </table>
     </div>
 </section>
 <!--section end-->
 <?php
-include_once(ROOT.'shared/_foot.php');
+include_once(ROOT . 'shared/_foot.php');
 ?>
 </body>
 

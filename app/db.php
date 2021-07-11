@@ -30,4 +30,13 @@ class DB
   {
     return mysqli_num_rows($result);
   }
+
+  public function toArray($result)
+  {
+    $return = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+      $return[] = $row;
+    }
+    return $return;
+  }
 }

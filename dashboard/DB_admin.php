@@ -18,19 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-sm">
-                            <h3 class="card-title" style="color: white;">2</h3>
-                            <h5>Departments</h5>
-                        </div>
-                        <div class="col-sm" style="text-align: right;">
-                            <h1 style="font-size: 65px;"> <i class="fal fa-building"></i></h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="col-md">
                 <div class="card">
                     <div class="row">

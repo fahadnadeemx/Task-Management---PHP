@@ -45,7 +45,7 @@ $flash = flash();
                     <th scope="col">Department</th>
                     <th scope="col">Designation</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Edit</th>
+                   
                     <th scope="col">Delete</th>
                 </tr>
             </thead>
@@ -56,7 +56,7 @@ $flash = flash();
                         <td><?= $row['department'] ?></td>
                         <td><?= $row['designation'] ?></td>
                         <td><?= $row['email'] ?></td>
-                        <td><a href="#"><button class="btn btn-primary editBtn">Edit</button></a></td>
+                        
                         <td><a onclick="return confirm('Are you sure you want to delete this user?')" href="./?delme=<?= $row['id'] ?>"><button class="btn deleteBtn">Delete</button></a></td>
                     </tr>
                 <?php } ?>

@@ -14,6 +14,13 @@ function flash()
     return $session->flash();
 }
 
+function flasher($data)
+{
+    $session = new Session();
+    $session->flasher($data);
+    return true;
+}
+
 function user()
 {
     $session = new Session();

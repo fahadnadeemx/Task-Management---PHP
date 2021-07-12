@@ -1,15 +1,37 @@
 <?php
 define('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/taskman/');
-include_once(ROOT . 'shared/_head.php');
-include_once(ROOT . 'app/Global.php'); #/app/Global.php');
+include_once(ROOT . 'app/Global.php');
 include_once(ROOT . 'app/DB.php');
+$db = new DB();
+if (!empty($_GET['delme'])) {
+    try {
+        $db->query('UPDATE `users` SET `IsActive` = 0 WHERE `id`= ' . $_GET['delme']);
+        $db->query('UPDATE `auth` SET `IsActive` = 0 WHERE `user_id` = ' . $_GET['delme']);
+        flasher(['User Removed Sucessfully']);
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        exit;
+    } catch (\Throwable $th) {
+        flasher(['Cant Delete this user']);
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        exit;
+    }
+}
+include_once(ROOT . 'shared/_head.php');
 $user = user();
 ByPass('admin');
-$db = new DB();
 $users = $db->query('SELECT * FROM `users` WHERE `IsActive` = 1');
+$flash = flash();
 ?>
 <!--section start-->
 <section>
+
+    <?php if (count($flash ?? []) > 0) {
+        foreach ($flash as $key => $value) {
+    ?>
+            <div class="alert alert-lg alert-<?= $value == 'User Removed Sucessfully' ? 'success' : 'danger' ?>"><?= $value ?></div>
+    <?php
+        }
+    } ?>
     <div class="addUser">
         <a href="<?= MYHTTP ?? '../' ?>dashboard/user/add/""><button class=" btn btn-primary submitBtn">Add User</button></a>
         <br>
@@ -35,7 +57,7 @@ $users = $db->query('SELECT * FROM `users` WHERE `IsActive` = 1');
                         <td><?= $row['designation'] ?></td>
                         <td><?= $row['email'] ?></td>
                         <td><a href="#"><button class="btn btn-primary editBtn">Edit</button></a></td>
-                        <td> <button class="btn deleteBtn">Delete</button></td>
+                        <td><a onclick="return confirm('Are you sure you want to delete this user?')" href="./?delme=<?= $row['id'] ?>"><button class="btn deleteBtn">Delete</button></a></td>
                     </tr>
                 <?php } ?>
             </tbody>

@@ -16,7 +16,7 @@ if (empty($_POST['createTask'])) {
         <?php if (count($flash ?? []) > 0) {
             foreach ($flash as $key => $value) {
         ?>
-                <div class="alert alert-lg alert-danger"><?= $value ?></div>
+                <div class="alert alert-lg alert-<?= $value == 'task added!'?'success':'danger' ?>"><?= $value ?></div>
         <?php
             }
         } ?>
@@ -91,7 +91,7 @@ if (empty($_POST['createTask'])) {
                 </div>
                 <div class="col-md-3">
                     <select name="priority" id="priority" class="custom-select" required>
-                        <option id="">select Priority</option>
+                        <option id="">Select Priority</option>
                         <option id="high">High</option>
                         <option id="medium">Medium</option>
                         <option id="low">Low</option>

@@ -1,5 +1,5 @@
 <?php
-define('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/mushiPHP/fahad/');
+define('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/taskman/');
 include_once(ROOT . 'app/DB.php');
 include_once(ROOT . 'app/Session.php');
 include_once(ROOT . 'app/Global.php');

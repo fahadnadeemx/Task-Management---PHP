@@ -6,7 +6,7 @@ if (empty($_GET['asd'])) {
 }
 $type = $_GET['asd'];
 $pageName = ucfirst($type) . " Tasks";
-define('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/');
+define('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/taskman/');
 include_once(ROOT . 'shared/_head.php');
 include_once(ROOT . 'app/Global.php');
 include_once(ROOT . 'app/DB.php');
@@ -43,7 +43,8 @@ try {
                             <td><?= $row['due_data'] ?? 'N/A' ?></td>
                             <td><?= ucfirst($row['status'] ?? 'N/A') ?></td>
                             <td><?= $row['priority'] ?? 'N/A' ?></td>
-                            <td><a href="#"><button class="btn btn-primary editBtn"><?= $pageName ?? 'Task' ?> </button></a></td>
+                            
+                        <td><a href="../user/viewTaskForm.php?ref=<?= $row['id'] ?? '' ?>"><button class="btn btn-primary editBtn">View Task</button></a></td>
                         </tr>
                     <?php }
                 } else { ?>

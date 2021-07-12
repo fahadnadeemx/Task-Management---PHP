@@ -1,5 +1,5 @@
 <?php
-define('MYHTTP', 'http://'.$_SERVER['HTTP_HOST'] . '/taskman');
+define('MYHTTP', 'http://'.$_SERVER['HTTP_HOST'] . '/taskman/');
 include_once(ROOT.'app/Global.php');
 $user = user();
 ByPass($user['role'] ?? 'user');

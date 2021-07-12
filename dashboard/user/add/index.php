@@ -1,5 +1,5 @@
 <?php
-define('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/mushiPHP/fahad/');
+define('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/taskman/');
 include_once(ROOT . 'shared/_head.php');
 include_once(ROOT . 'app/Global.php');
 include_once(ROOT . 'app/DB.php');
@@ -13,7 +13,7 @@ ByPass('admin');
     <?php if (count($flash ?? []) > 0) {
         foreach ($flash as $key => $value) {
     ?>
-            <div class="alert alert-lg alert-danger"><?= $value ?></div>
+            <div class="alert alert-lg alert-<?= $value == 'user added!'?'success':'danger' ?>"><?= $value ?></div>
     <?php
         }
     } ?>
